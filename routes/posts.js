@@ -41,7 +41,7 @@ router.post('/', async(request, response)=>{
 
 // update the specific post by using update method
 router.put('/:id', async(request, response)=>{
-    const {title, extract, image, content} = reqquest.body;
+    const {title, extract, image, content} = request.body;
     try{
         const updatedPost = await Post.findByIdAndUpdate(
             request.params.id,
